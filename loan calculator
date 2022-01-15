@@ -1,0 +1,179 @@
+#include <stdio.h>
+int main ()
+{
+  
+  int amount,age, months;
+    float emi,totemi,totamt;
+    char name,ans;
+  int choice,i, num;
+  printf("********************************************************************************\n");
+  printf("\t\t\tWELCOME TO LOAN CALCULATOR\n");
+  printf("*********************************************************************************\n");
+  printf ("Press 1 for HOME LOAN\n");
+  printf ("Press 2 for CAR LOAN\n");
+  printf ("Press 3 for PERSONAL LOAN\n");
+  printf ("Press 4 for BUSINESS LOAN\n");
+  printf ("Enter your choice:");
+  scanf("%d",&choice);
+  
+ 
+ 
+  switch (choice)
+    {
+    case 1:
+      {
+          
+          printf("Enter your age:");
+          scanf("%d",&age);
+          if (age>=18 && age <=55){
+	        printf("The Rate of Interset for HOME LOAN  is 8 percent \n");
+            printf("Enter the amount of loan you want(without comma):");
+            scanf("%d",&amount);
+            printf("\nEnter loan tenure(in months)");
+            scanf("%d",&months);
+            emi = amount*0.08/12;
+            totemi = emi * months;
+            printf("EMI per month is Rs: %.2f",emi);
+            printf("\nTOTAL EMI after %d months is: Rs.%.2f",months,totemi);
+            totamt=amount+totemi;
+            printf("\nTotal amount you need to pay back to the bank is :%.2f",totamt);
+          }
+          else if (age>=56){
+            printf("The Rate of Interset for HOME LOAN for SENIOR CITIZEN is 7 percent \n");
+            printf("Enter the amount of loan you want(without comma):");
+            scanf("%d",&amount);
+            printf("\nEnter loan tenure(in months)");
+            scanf("%d",&months);
+            emi = amount*0.07/12;
+            totemi = emi * months;
+            printf("EMI per month is Rs: %.2f",emi);
+            printf("\nTOTAL EMI is after %d months is: Rs.%.2f",months,totemi);
+            totamt=amount+totemi;
+            printf("\nTotal amount you need to pay back to the bank is :%.2f",totamt);
+              
+          }
+          
+          else{
+              printf("SORRY YOU ARE NOT ELIGIBLE");
+          }
+            break;
+      }
+    case 2:
+      {
+          printf("Enter your age:");
+          scanf("%d",&age);
+          if (age>=18 && age<=55){
+            printf("The Rate of Interest for CAR LOAN for  is 9 percent\n");
+            printf("Enter the amount of loan you want(without comma):");
+            scanf("%d",&amount);
+            printf("\nEnter loan tenure(in months)");
+            scanf("%d",&months);
+            emi = amount*0.09/12;
+            totemi = emi * months;
+            printf("EMI per month is: %.2f",emi);
+            printf("\nTOTAL EMI after %d moths is: Rs. %.2f",months,totemi);
+            totamt=amount+totemi;
+            printf("\nTotal amount you need to pay back to the bank is :%.2f",totamt);
+          }
+          else if (age>=56){
+            printf("The Rate of Interest for CAR LOAN for SENIOR CITIZEN is 7.5 percent\n");
+            printf("Enter the amount of loan you want(without comma):");
+            scanf("%d",&amount);
+            printf("\nEnter loan tenure(in months)");
+            scanf("%d",&months);
+            emi = amount*0.075/12;
+            totemi = emi * months;
+            printf("EMI per month is: %.2f",emi);
+            printf("\nTOTAL EMI after %d months is: Rs. %.2f",months,totemi);
+            totamt=amount+totemi;
+            printf("\nTotal amount you need to pay back to the bank is :%f",totamt);
+          }
+            
+          else{
+              printf("SORRY YOU ARE NOT ELIGIBLE");
+          }
+            break;
+
+      }
+    case 3:
+      {
+          printf("Enter your age:");
+          scanf("%d",&age);
+          if (age>=18 && age <=55){
+            printf("The Rate of Interest for PERSONAL LOAN is 12 percent\n");
+            printf("Enter the amount of loan you want(without comma):");
+            scanf("%d",&amount);
+            printf("\nEnter loan tenure(in months)");
+            scanf("%d",&months);
+            emi = amount*0.12/12;
+            totemi = emi * months;
+            printf("EMI per month is: %.2f",emi);
+            printf("\nTOTAL EMI after %d months is: Rs. %.2f",months,totemi);
+            totamt=amount+totemi;
+            printf("\nTotal amount you need to pay back to the bank is :%f",totamt);
+          }
+          else if (age>=56){
+            printf("The Rate of Interest for PERSONAL LOAN for SENIOR CITIZEN is 10 percent\n");
+            printf("Enter the amount of loan you want(without comma):");
+            scanf("%d",&amount);
+            printf("\nEnter loan tenure(in months)");
+            scanf("%d",&months);
+            emi = amount*0.10/12;
+            totemi = emi * months;
+            printf("EMI per month is: %.2f",emi);
+            printf("\nTOTAL EMI after %d months is: Rs. %.2f",months,totemi);
+            printf("\nTotal amount you need to pay back to the bank is :%f",totamt);
+          }
+              
+          
+          else{
+              printf("SORRY YOU ARE NOT ELIGIBLE");
+          }
+            break;
+      }
+    
+    case 4:
+    {
+          printf("Enter your age:");
+          scanf("%d",&age);
+          if (age>=18 && age<=55){
+            printf("The Rate of Interest for BUSINESS LOAN is 14 percent\n");
+            printf("Enter the amount of loan you want(without comma):");
+            scanf("%d",&amount);
+            printf("\nEnter loan tenure(in months)");
+            scanf("%d",&months);
+            emi = amount*0.14/12;
+            totemi = emi * months;
+            printf("EMI per month is: %.2f",emi);
+            printf("\nTOTAL EMI after %d months is: Rs.%.2f",months,totemi);
+            totamt=amount+totemi;
+            printf("\nTotal amount you need to pay back to the bank is :%f",totamt);
+          }
+          else if (age<=56)
+          {
+            printf("The Rate of Interest for BUSINESS LOAN for SENIOR CITIZEN is 12 percent\n");
+            printf("Enter the amount of loan you want(without comma):");
+            scanf("%d",&amount);
+            printf("\nEnter loan tenure(in months)");
+            scanf("%d",&months);
+            emi = amount*0.12/12;
+            totemi = emi * months;
+            printf("EMI per month is: %.2f",emi);
+            printf("\nTOTAL EMI after %d months is: Rs. %.2f",months,totemi);
+            totamt=amount+totemi;
+            printf("\nTotal amount you need to pay back to the bank is :%f",totamt);
+          }
+          
+          else{
+              printf("SORRY YOU ARE NOT ELIGIBLE");}
+            break;
+    }
+        
+    
+    default:{
+      printf ("wrong Input\n");
+        break;
+    }
+    }
+  return 0;
+}
