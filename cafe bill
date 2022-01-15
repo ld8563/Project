@@ -1,0 +1,71 @@
+#include <stdio.h>
+int main()
+{
+ int a,qty,rate,total;
+ 
+
+  int i, orderq[10], pric[] = { 10,10,20,25,40,30,40,};
+  char *s[] ={"COFFEE","TEA","COLD COFFEE","MILK SHAKE","CHILLI PANEER","CLUB SANDWICH","CHILLI POTATO"};
+ printf("*********************************************************************************************");
+ printf("\n\t\t\t\t WELCOME TO OUR CAFE\n");
+ printf("*********************************************************************************************\n");
+ printf("\n\t\tTODAY's MENU CARD"); 
+ printf("\n");
+ for (i = 0; i < 6; i++)
+    {
+      printf (" %d. %s \t\t %d (Per Plate)\n", i + 1, s[i], pric[i]);
+    }
+    printf("Enter your choice:");
+ 
+ scanf("%d",&a);
+ switch(a)
+ {
+  case 1:
+    printf("\nYou have selected Coffee.\n Enter the quantity :");
+    scanf("%d",&qty);
+    rate=5;
+    total=qty*rate;
+    printf("\nTotal amount :%d",total);
+    break;
+  case 2:
+    printf("\nYou have selected Tea.\n Enter the quantity :");
+    scanf("%d",&qty);
+    rate=10;
+    total=qty*rate;
+    printf("\nTotal amount :%d",total);
+    break;
+  case 3:
+    printf("\nYou have selected Cold coffee.\n Enter the quantity :");
+    scanf("%d",&qty);
+    rate=15;
+    total=qty*rate;
+    printf("\nTotal amount :%d",total);
+    break;
+  case 4:
+    printf("\nYou have selected Milk shake.\n Enter the quantity :");
+    scanf("%d",&qty);
+    rate=20;
+    total=qty*rate;
+    printf("\nTotal amount :%d",total);
+    break;
+  case 5:
+    printf("\nYou have selected CHILLI PANEER\n Enter the quantity :");
+    scanf("%d",&qty);
+    rate=40;
+    total=qty*rate;
+    printf("\nTotal amount :%d",total);
+    break;
+    case 6:
+    printf("\nYou have selected CLUB SANDWICH\n Enter the quantity :");
+    scanf("%d",&qty);
+    rate=30;
+    total=qty*rate;
+    printf("\nTotal amount :%d",total);
+    break;
+    
+  default:
+    printf("\nSorry Unavailable...%ds",a);
+    break;
+ }
+return 0;
+}
